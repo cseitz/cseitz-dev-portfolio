@@ -1,0 +1,230 @@
+/* Global Styling */
+
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	outline: none;
+	font-weight: normal;
+
+}
+
+body {
+	margin: 0px;
+
+}
+
+#navBar.thick {
+	background-color: transparent;
+
+}
+
+#navBar {
+	background-color: rgb(253, 184, 19);
+
+}
+
+h1 {
+	font-family: impact;
+
+}
+
+/* Section Styling */
+
+.section {
+	width: 100%;
+
+}
+
+.sectionColumn {
+	display: block;
+	float: left;
+
+}
+
+.footer button {
+	border: none;
+	font-size: 25px;
+	background: none;
+	cursor: pointer;
+	color: rgb(253, 184, 19);
+
+}
+
+.footer .socialicon {
+	height: 50px;
+	cursor: pointer;
+
+}
+
+#navBar button {
+	color: white;
+	transition: scale 0.5s, color 0.5s;
+
+}
+
+#navBar button:hover {
+	transform: scale(1.05);
+
+}
+
+h2 {
+	font-family: impact;
+
+}
+
+.cycleBackImg {
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	transition: opacity 0.5s;
+
+}
+
+.cycleFade {
+	opacity: 0;
+
+}
+
+/* Styling for Parallax Header Image */
+
+.parallaxBackImage {
+	background-color: black;
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: 50%;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	z-Index: -1;
+
+}
+
+.footer h3 {
+	font-size: 15px;
+	color: rgb(253, 184, 19);
+	font-family: segoeui;
+
+}
+
+#navBar {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	z-index: 5;
+}
+
+#navBar.fixed {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+/* NavBar Animations */
+
+button {
+	font-weight: 550;
+	/*color: #405e7c;*/
+}
+
+button:hover {
+	/*color: #2480fe;*/
+}
+
+#navBar {
+	min-height: 50px;
+	max-height: 50px;
+	height: 50px;
+	/*background-color: white;*/
+	-webkit-transition: 0.15s ease-in-out;
+	-moz-transition: 0.15s ease-in-out;
+	-o-transition: 0.15s ease-in-out;
+	-ms-transition: 0.15s ease-in-out;
+	transition: 0.15s ease-in-out;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+#navBar:after {
+	content: "";
+	/*background: #f3f3f3;
+            height: 1px;*/
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: -1;
+}
+
+#navBar.thick {
+	min-height: 90px;
+	max-height: 90px;
+	height: 90px;
+}
+
+#navBar tr {
+	width: 100%;
+	min-height: 100%;
+}
+
+#navBar td {
+	/*width: 100%;*/
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	padding-left: 3.5vw;
+	padding-right: 3.5vw;
+}
+
+#navBar td.right {
+	float: right;
+}
+
+#navBar button {
+	display: table-cell;
+	border: 0px !important;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0px;
+	height: 100%;
+	cursor: pointer;
+	font-size: 17px;
+	background-color: transparent;
+	/*font-family: "Open Sans", Arial, Verdana, sans-serif;*/
+}
+
+@font-face {
+	font-family: impact;
+	src: url(../fonts/impact.ttf);
+}
+
+@font-face {
+	font-family: segoeui;
+	src: url(../fonts/segoeui.ttf);
+}
+
+/* Mobile formatting for Sections */
+
+@media only screen and (max-width: 800px) {
+	.footer button {
+		font-size: 15px;
+	}
+	
+	#navBar button {
+		font-size: 10px;
+		padding: 5px;
+	}
+}
+
+@media only screen and (max-width: 200px) {
+	.sectionColumn {
+		width: 100% !important;
+		text-align: center;
+	}
+}

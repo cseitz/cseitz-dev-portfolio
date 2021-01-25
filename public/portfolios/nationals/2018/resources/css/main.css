@@ -1,0 +1,195 @@
+
+
+/* Default Font and Styling */
+
+/* Give the body, h1, p, and buttons a nice and clean default font. */
+body, h1, p, button {
+	font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+/* If for whatever reason we have things going off the side of the page, make it not visible. */
+body {
+	overflow-x: hidden;
+
+}
+
+button {
+	outline: 0px; /* Remove the ugly outline */
+	cursor: pointer;
+}
+
+/* Floating */
+
+/* Used to make things align to left, right, or center. */
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.center {
+	float: center;
+}
+
+/* Navigation Styling */
+
+/* This makes the Navigation Bar have coloring and how it scales on different screens. */
+#navbar {
+	background-color: #222222;
+	color: white;
+
+	width: 100%;
+	height: 10vh;
+	min-height: 20px;
+}
+
+/* We want to style the buttons inside the navigation and make them look nice. */
+#navbar button {
+	border: none;
+	color: inherit;
+	background-color: rgba(0, 0, 0, 0);
+	height: 100%;
+	width: auto;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	font-size: 15px;
+	margin-top: 5px;
+}
+
+#navbar button::after {
+	width: 100%;
+	text-align: center;
+	float: initial;
+	background-color: orange;
+	position: static;
+	height: 1px;
+	display: inline-block;
+	margin-left: 0%;
+	margin-bottom: 10px;
+	content: "";
+	transform: background-color 0.25s, height 0.25s, width 0.25s, margin-left 0.25s, margin-bottom 0.25s;
+	-webkit-transition: background-color 0.25s, height 0.25s, width 0.25s, margin-left 0.25s, margin-bottom 0.25s;
+}
+
+#navbar button:hover::after {
+	background-color: orange;
+	height: 2px;
+	width: 120%;
+	margin-left: -10%;
+	margin-bottom: 9px;
+}
+
+/* Correctly scale and style the logo in the navigation */
+#navbar .logo {
+	height: 80%;
+	margin-top: 1vh;
+
+}
+
+#navbar_inner {
+	height: 100%;
+	margin: auto;
+	max-width: 1200px;
+	width: 80vw;
+}
+
+/* Sections are used to create a nice, simple, and full-width box on the page. */
+
+.section {
+	width: 100%;
+}
+
+/* Waveform Styling */
+
+#waveform_section {
+	background-image: url("../images/band/1.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+#waveform_section h1 {
+	color: white;
+	font-weight: 400;
+	position: absolute;
+	top: 15vh;
+	left: 5vw;
+}
+
+#waveform_section h2 {
+	color: white;
+	font-weight: 300;
+	position: absolute;
+	top: 15vh;
+	left: 5vw;
+}
+
+#playPause {
+	border-radius: 100%;
+	background-color: orange;
+	height: 10%;
+	position: absolute;
+	top: 27vh;
+	margin-left: 6vw;
+	cursor: pointer;
+}
+
+#waveform {
+	width: 70%;
+	margin-left: 22vh;
+	padding-top: 17vh;
+}
+
+#waveform wave {
+	background-image: none;
+	background-color: rgba(0, 0, 0, 0);
+	width: 80vw;
+	margin-bottom: 0px;
+	height: 100%;
+	max-width: 80vw;
+	max-height: 10vh;
+	overflow-x: hidden!important;
+}
+
+
+/* */
+
+.band_Description_Paragraph {
+	max-width: 300px;
+	width: 80vw;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+}
+
+
+/* */
+
+.bandMember {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 100px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.bandMember h1 {
+	font-size: 25px;
+	padding-top: 100px;
+}
+
+
+/* Footer */
+
+.footer {
+	width: 100%;
+	min-height: 50px;
+	background-color: #dadada;
+	text-align: center;
+	padding-top: 20px;
+}

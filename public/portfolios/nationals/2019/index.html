@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <title>Reed's Cheese | Home</title>
+    <script src="assets/js/jquery-3.3.0.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</head>
+
+<body style="overflow-x: hidden;"> <!-- Removed Horizontal Overflow -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left-float">
+				<!-- Left Aligned Buttons -->
+                <button class="navbtn" id="navlogo" onclick="linkify(this)" data-href="index.html"><img style="height: 50px; max-height: 10vw;" src="assets/media/REEDS-CHEES-logo-stack-white2.png" alt="Reed's Cheese Logo"></button>
+            </div>
+            <div class="right-float">
+				<!-- Right Aligned Buttons -->
+                <button class="navbtn" onclick="linkify(this)" data-href="locations.html">Follow Our Truck</button>
+                <button class="navbtn" onclick="linkify(this)" data-href="catering.html">Catering</button>
+                <button class="navbtn" onclick="linkify(this)" data-href="https://facebook.com/reedscheese"><img id="facebookbtn" style="height: 100%; max-height: 30px;" src="assets/media/FB-f-Logo__white_29.png" alt="Facebook Logo"></button>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-spacer"> <!-- Since Navbar is fixed, we need to push down content -->
+    </div>
+    <div class="headerimage" style="height: calc(100vh - 92px); max-height: 50vw;">
+        <img class="headerimage-image" style="margin-top: -10%;" src="assets/images/food-truck.jpeg" alt="Food Truck"> <!-- Nice big food truck image -->
+    </div>
+
+    <div class="spacer" style="height: 50px;">
+    </div>
+
+	<!-- It was far more effective to individually style elements due to the VERY SPECIFIC layout and nature of the wireframes. -->
+
+    <div class="mobile"> <!-- Only display on mobile -->
+
+		<!-- The structure for the following menu items is as follows: -->
+
+        <div class="full-width" style="min-height: 150px; text-align: center;"> <!-- Single row of the menu -->
+
+            <div class="divider" style="width: calc(65% - 50px); padding-left: 50px;"> <!-- Text Portion. Can be first or second based on which side the image should be on. -->
+                <h2>$7 Plane Jane</h2> <!-- Title for the item on the Menu. -->
+                <p>Pick up to three cheeses: <!-- Content for the item on the Menu -->
+                    mild cheddar, muenster,
+                    mozzarella, provolone,
+                    smoked cheddar, smoked
+                    gouda, green onion cheddar,
+                    bacon horseradish cheddar,
+                    or green onion cheddar</p>
+            </div>
+            <div class="divider" style="width: 25%; float: right; overflow: hidden; border-top-left-radius: 0.5em; border-bottom-left-radius: 0.5em;"> <!-- Image holder for menu item. -->
+                <img style="height: 150px;" src="assets/images/plain.jpeg" alt="Picture of Plane Jane"> <!-- Image itself. Each one has unique cropping, clipping, and positioning due to each being different sizes and desired positions. -->
+            </div>
+
+        </div>
+        <div class="spacer" style="height: 20px;"> <!-- Spacing between elements. -->
+        </div>
+
+		<!-- The above described comments can apply to the next 200 lines of the page. -->
+
+        <div class="full-width" style="min-height: 150px;">
+
+            <div class="divider" style="width: 45%; float: left; overflow: hidden; border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;">
+                <img style="height: 150px;" src="assets/images/pork.jpeg" alt="Picture of Porker">
+            </div>
+            <div class="divider" style="width: calc(55% - 25px); float: right; padding-left: 25px;">
+                <h2>$8 Porker</h2>
+                <p>Smoked cheddar,
+                    smoked gouda &
+                    pulled pork</p>
+            </div>
+        </div>
+
+        <div class="spacer" style="height: 20px;">
+        </div>
+
+        <div class="full-width" style="min-height: 150px;">
+
+            <div class="divider" style="width: calc(55% - 50px); padding-left: 50px;">
+                <h2>$8 Foghorn</h2>
+                <p>Green onion cheddar,
+                    spicy ranch, chicken,
+                    and farm-fresh bacon</p>
+            </div>
+            <div class="divider" style="width: 35%; float: right; overflow: hidden; border-top-left-radius: 0.5em; border-bottom-left-radius: 0.5em;">
+                <img style="height: 150px;" src="assets/images/chicken-tomato.jpeg" alt="Picture of Foghorn">
+            </div>
+
+        </div>
+
+        <div class="spacer" style="height: 20px;">
+        </div>
+
+        <div class="full-width" style="min-height: 150px;">
+
+            <div class="divider" style="width: 45%; float: left; overflow: hidden; border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;">
+                <img style="height: 150px;" src="assets/images/cheese-ball.jpeg" alt="Picture of Cheese Balls">
+            </div>
+            <div class="divider" style="width: calc(55% - 25px); float: right; padding-left: 25px;">
+                <h2>$3 Cheese Balls</h2>
+                <p>Fried Mozzarella Balls with
+                    Pumpkin, Sage and
+                    Caramelized Onion
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="tablet" style="text-align: center; padding-left: 50px;"> <!-- Show only on tablet-sized devices -->
+
+        <div class="full-width" style="height: 150px;">
+            <div class="divider" style="width: 65%; float: left; text-align: left;">
+                <h2>$7 Plane Jane</h2>
+                <p>Pick up to three cheeses:
+                    mild cheddar, muenster,
+                    mozzarella, provolone,
+                    smoked cheddar, smoked
+                    gouda, green onion cheddar,
+                    bacon horseradish cheddar,
+                    or green onion cheddar</p>
+            </div>
+            <div class="divider" style="width: 30%; float: right;">
+                <img style="height: 150px; margin-right: -10px; border-top-left-radius: 0.5em; border-bottom-left-radius: 0.5em;" src="assets/images/plain.jpeg" alt="Picture of Plane Jane">
+            </div>
+        </div>
+
+        <div class="spacer" style="height: 20px;">
+        </div>
+
+
+        <div class="full-width" style="height: 75px; text-align: left;">
+            <div class="divider" style="width: 65%; float: left; text-align: left;">
+                <h2>$8 Porker</h2>
+                <p>Smoked cheddar,
+                    smoked gouda &
+                    pulled pork</p>
+            </div>
+            <div class="divider" style="width: 30%; float: right; overflow: hidden; border-top-left-radius: 1em; border-bottom-left-radius: 1em;">
+                <img style="height: 150px; margin-top: -25%; margin-right: -10px;" src="assets/images/pork.jpeg" alt="Picture of Porker">
+            </div>
+        </div>
+
+        <div class="spacer" style="height: 20px;">
+        </div>
+
+
+        <div class="full-width" style="height: 75px;">
+            <div class="divider" style="width: 65%; float: left; text-align: left;">
+                <h2>$8 Foghorn</h2>
+                <p>Green onion cheddar,
+                    spicy ranch, chicken,
+                    and farm-fresh bacon</p>
+            </div>
+            <div class="divider" style="width: 30%; float: right; overflow: hidden; border-top-left-radius: 1em; border-bottom-left-radius: 1em;">
+                <img style="height: 150px; margin-top: -25%; margin-right: -10px;" src="assets/images/chicken-tomato.jpeg" alt="Picture of Foghorn">
+            </div>
+        </div>
+
+        <div class="spacer" style="height: 20px;">
+        </div>
+
+
+        <div class="full-width" style="height: 75px;">
+            <div class="divider" style="width: 65%; float: left; text-align: left;">
+                <h2>$3 Cheese Balls</h2>
+                <p>Fried Mozzarella Balls with
+                    Pumpkin, Sage and
+                    Caramelized Onion
+                </p>
+            </div>
+            <div class="divider" style="width: 30%; float: right; overflow: hidden; border-top-left-radius: 1em; border-bottom-left-radius: 1em;">
+                <img style="height: 150px; margin-top: -25%; margin-right: -10px;" src="assets/images/cheese-ball.jpeg" alt="Picture of Cheese Balls">
+            </div>
+        </div>
+
+        <div class="spacer" style="height: 20px;">
+        </div>
+
+
+
+
+
+    </div>
+    <div class="desktop" style="text-align: center"> <!-- Display if not mobile or tablet -->
+
+        <div class="full-width" style="height: 150px;">
+
+            <div class="divider" style="width: 30%; float: left; overflow: hidden; border-radius: 0.5em;">
+                <img class="hover" style="width: 100%; border-radius: 0.5em;" src="assets/images/plain.jpeg" alt="Picture of Plane Jane">
+            </div>
+            <div class="divider" style="width: 60%; float: right; text-align: left;">
+                <h2>$7 Plane Jane</h2>
+                <p>Pick up to three cheeses:
+                    mild cheddar, muenster,
+                    mozzarella, provolone,
+                    smoked cheddar, smoked
+                    gouda, green onion cheddar,
+                    bacon horseradish cheddar,
+                    or green onion cheddar</p>
+            </div>
+
+
+        </div>
+
+
+        <div class="spacer" style="height: 20px;">
+        </div>
+        <div class="full-width" style="height: 100px;">
+
+            <div class="divider" style="width: 30%; float: left; overflow: hidden; border-radius: 0.5em;">
+                <img class="hover" style="width: 100%; border-radius: 0.5em;" src="assets/images/pork.jpeg" alt="Picture of Porker">
+            </div>
+            <div class="divider" style="width: 60%; float: right; text-align: left;">
+                <h2>$8 Porker</h2>
+                <p>Smoked cheddar,
+                    smoked gouda &
+                    pulled pork</p>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="spacer" style="height: 20px;">
+        </div>
+        <div class="full-width" style="height: 100px;">
+
+            <div class="divider" style="width: 30%; float: left; overflow: hidden; border-radius: 0.5em;">
+                <img class="hover" style="width: 100%; border-radius: 0.5em; margin-top: -10%;" src="assets/images/chicken-tomato.jpeg" alt="Picture of Foghorn">
+            </div>
+            <div class="divider" style="width: 60%; float: right; text-align: left;">
+                <h2>$8 Foghorn</h2>
+                <p>Green onion cheddar,
+                    spicy ranch, chicken,
+                    and farm-fresh bacon</p>
+            </div>
+
+
+        </div>
+
+
+        <div class="spacer" style="height: 20px;">
+        </div>
+        <div class="full-width" style="height: 100px;">
+
+            <div class="divider" style="width: 30%; float: left; overflow: hidden; border-radius: 0.5em;">
+                <img class="hover" style="width: 100%; border-radius: 0.5em; margin-top: -15%;" src="assets/images/cheese-ball.jpeg" alt="Picture of Cheese Balls">
+            </div>
+            <div class="divider" style="width: 60%; float: right; text-align: left;">
+                <h2>$3 Cheese Balls</h2>
+                <p>Fried Mozzarella Balls with
+                    Pumpkin, Sage and
+                    Caramelized Onion
+                </p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="mobiletablet"> <!-- Show on mobile and/or tablet -->
+        <div class="full-width" style="border-bottom: 2px solid rgb(128, 128, 128); height: 25vw;">
+
+        </div>
+        <div class="full-width" style="height: 35vw;">
+            <div style="border-radius: 100%; border: 2px solid rgb(128, 128, 128); height: 35vw; width: 35vw; overflow: hidden; text-align: center; margin-left: auto; margin-right: auto; margin-top: -18%;">
+                <img style="height: 100%; margin-left: -25%;" src="assets/images/owners.jpeg" alt="Reed and Brent, The Owners">
+            </div>
+        </div>
+        <div style="width: calc(100% - 100px); padding: 50px;">
+            <p>
+                Reedʼs Cheese Food Truck was founded on the ideal of spreading comfort to
+                people in a tangible way. As a child, Reed was terrified of storms. As soon as the
+                sky darkened, he would crawl under his bed and stay there for hours. Growing up
+                in the Midwest, this made the Spring and Summer months very difficult for him.
+                During a particularly long storm, Reedʼs mother managed to coax him out from
+                under his bed and to the kitchen table with the promise of his favorite sandwich,
+                grilled cheese. Since it worked once, it quickly became a ritual for them. Soon,
+                storms became a special time of comfort and closeness for Reed and his mother,
+                always accompanied by grilled cheese sandwiches.<br><br>
+                The idea of spreading this comfort to people came to Reed as a highschooler and
+                followed him through college and into his career. It took his cousin Brent, though,
+                to come up with the idea of the food truck. They went into business together and
+                so Reedʼs Cheese Food Truck was born. Nowadays you can find Reed and Brent
+                all over the city, at various events, and parks. They are one of the few food trucks
+                that will stay open during a storm, serving up grilled cheese sandwiches just like
+                Reedʼs mom used to make.
+            </p>
+        </div>
+    </div>
+    <div class="desktop"> <!-- Show whenever not mobile or tablet -->
+
+        <br><br>
+        <div class="full-width" style="height: 2px; background-color: rgb(128, 128, 128); margin: 0px!important; max-width: 100%!important;">
+
+        </div>
+        <br><br>
+        <div class="full-width">
+            <div class="divider" style="height: 300px; width: 35%; float: left; padding-right: 50px;"> <!-- Lots of styling to correctly display the image to the left and with good scaling, etc. -->
+                <div style="float: right; border-radius: 100%; border: 2px solid rgb(128, 128, 128); height: 300px; width: 300px; overflow: hidden; margin-top: 25px;">
+                    <img style="height: 100%; margin-left: -25%;" src="assets/images/owners.jpeg" alt="Reed and Brent, The Owners">
+                </div>
+            </div>
+            <div class="divider" style="width: calc(65% - 50px);">
+                <p style="width: 50vw; max-width: 600px;">
+                    Reedʼs Cheese Food Truck was founded on the ideal of spreading comfort to
+                    people in a tangible way. As a child, Reed was terrified of storms. As soon as the
+                    sky darkened, he would crawl under his bed and stay there for hours. Growing up
+                    in the Midwest, this made the Spring and Summer months very difficult for him.
+                    During a particularly long storm, Reedʼs mother managed to coax him out from
+                    under his bed and to the kitchen table with the promise of his favorite sandwich,
+                    grilled cheese. Since it worked once, it quickly became a ritual for them. Soon,
+                    storms became a special time of comfort and closeness for Reed and his mother,
+                    always accompanied by grilled cheese sandwiches.<br><br>
+                    The idea of spreading this comfort to people came to Reed as a highschooler and
+                    followed him through college and into his career. It took his cousin Brent, though,
+                    to come up with the idea of the food truck. They went into business together and
+                    so Reedʼs Cheese Food Truck was born. Nowadays you can find Reed and Brent
+                    all over the city, at various events, and parks. They are one of the few food trucks
+                    that will stay open during a storm, serving up grilled cheese sandwiches just like
+                    Reedʼs mom used to make.
+                </p><br><br>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

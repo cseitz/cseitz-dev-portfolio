@@ -1,0 +1,115 @@
+
+
+/* Styling the top image */
+#image_section {
+	background-image: url("resources/images/band/2.jpg");
+	background-size: cover;
+	background-position: top;
+}
+
+#image_section h1 {
+	color: white;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 6vw;
+	padding-left: 15%;
+	top: 15%;
+	font-weight: 300;
+}
+
+/* Styling Event Labels */
+
+.event-row {
+	max-width: 80vw;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.event-row td {
+	width: 100%;
+}
+
+.showMobile {
+	display: none;
+}
+.showTablet {
+	display: none;
+}
+.showDesktop {
+	display: none;
+}
+
+.event-row .time {
+	text-align: right;
+}
+
+
+@media screen and (max-width:500px) { /* For Mobile */
+	.event-row {
+		
+	}
+	
+	.showMobile {
+		display: block;
+	}
+	
+}
+
+@media screen and (min-width:500px) { /* For Tablets */
+	.event-row {
+		
+	}
+	
+	.showTablet {
+		display: block;
+	}
+	
+	
+	.event-row h1 {
+		display: inline-block;
+	}
+	
+	.event-row .date {
+		text-align: right;
+		
+	}
+	
+}
+
+@media screen and (min-width:1300px) { /* For Desktops */
+	.event-row {
+		
+	}
+	
+	.showTablet {
+		display: none;
+	}
+	
+	.showDesktop {
+		display: block;
+	}
+	
+	
+}
+
+
+
+
+/* The wireframe shows the Tablet size on Events have left-aligned footer text. */
+@media screen and (min-width:500px) {
+	.footer {
+		text-align: left!important;
+		
+	}
+}
+
+@media screen and (min-width:1000px) {
+	.footer {
+		text-align: center!important;
+		
+	}
+}
+

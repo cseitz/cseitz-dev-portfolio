@@ -1,2 +1,9 @@
 
 @import '@/scss/responsive.scss';
+@import '@/scss/themes.scss';
+
+body {
+  @include dark {
+    //background-color: red;
+  }
+}

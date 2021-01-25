@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="nav" hidden>
     <router-link to="/">Home</router-link> |
     <router-link to="/portfolio">Portfolio</router-link>
   </div>
@@ -7,12 +7,17 @@
 </template>
 
 <style lang="scss">
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  /*@include dark {
+    color: white;
+    background-color: black;
+  }*/
 }
 
 #nav {
@@ -27,4 +32,5 @@
     }
   }
 }
+
 </style>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+		#navBar.thick button:hover {
+			color: rgb(253, 184, 19);
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css">
+	<script src="resources/js/main.js"></script>
+	<script src="resources/js/navbar.js"></script>
+	<title>Home | Pedigree Foundation</title>
+</head>
+
+<body>
+
+	<!-- THE FOLLOWING WAS ADDED TO ADD EXTRA CONTEXT AND FUNCTIONALITY TO THE SHOWCASE OF THIS WEBSITE. IT IS NOT PART OF WHAT WAS CODED IN THE COMPETITION. -->
+		<!-- <script src="mobileonly.js"></script>
+		<script src="extrainfo.js"></script> -->
+	<!-- FROM THIS POINT FORWARD, ALL CONTENT IS TRUE AND IN ITS ORIGINAL CONDITION AS WHAT WAS TURNED IN TO THE JUDGES -->
+	
+	<!-- Fluid navbar that changes size based on page position. Adds some more flavor to the site. -->
+	<table class="fixed thick" id="navBar">
+		<tr>
+			<td>
+				<button onclick="openLink(this)" data-href="index.html">Home</button>
+				<button onclick="openLink(this)" data-href="about.html">About Us</button>
+				<button onclick="openLink(this)" data-href="success.html">Success Stories</button>
+				<button onclick="openLink(this)" data-href="resources.html">Resources</button>
+			</td>
+			<td style="float: right">
+				<button onclick="openLink(this)" data-href="https://donate.pedigreefoundation.org/give/191703/#!/donation/checkout">Donate</button>
+			</td>
+		</tr>
+	</table>
+	<!-- Parallax Header Image. Gives the website a much better feel. -->
+	<div class="parallaxBackImage" style="min-height: 100vh">
+		<div style="width: 100%; height: 100vh; background-color: rgb(0, 0, 0); opacity: 0"></div>
+		<div class="cycleBackImg parallaxBackImage" id="cycleBack1"></div>
+		<div class="cycleBackImg parallaxBackImage" id="cycleBack2"></div>
+	</div>
+	<script>
+		/* JavaScript movement of the parallax image for a cool effect! */
+		(function() {
+			var parallax = document.currentScript.previousElementSibling;
+			var func = function() {
+				parallax.style.transform = "translate(0, -" + (document.documentElement.scrollTop * 0.3333333333333333) + "px)";
+			}
+			window.addEventListener("scroll", func);
+			window.addEventListener("resize", func);
+			window.addEventListener("load", function() {
+				func();
+			});
+		})();
+	</script>
+	<div style="min-height: 100vh; min-width: 100%">
+		<p>
+			<div style="text-align: center; width: 100%; margin-top: 190px; color: white">
+				<img src="resources/images/transparentlogo1.png" style="width: 20vmax; min-width: 30vh;">
+				<h1 style="margin-top: -2vh; color: rgb(253, 184, 19); max-width: 50vw; margin-left: auto; margin-right: auto; border: 1px solid rgb(253, 184, 19); background-color: rgba(0, 0, 0, 0.25);">
+					We see a day when all dogs are safe, secure, cared for, fed well, and loved.
+				</h1>
+			</div>
+		</p>
+	</div>
+	<script>
+		// Rotate images around. Looks great!
+		var firstCycle = true;
+		var cycleImgs = [
+			"resources/images/beach-1854123_1920.jpg",
+			"resources/images/animal-animal-photography-animal-portrait-422220.jpg",
+			"resources/images/beach-863139_1920.jpg",
+			"resources/images/adorable-1850465_1920.jpg",
+			"resources/images/matt-nelson-259365-unsplash.jpg",
+			"resources/images/nature-3042751_1920.jpg",
+
+		];
+		var clen = cycleImgs.length;
+		var cycleIndex = Math.floor(Math.random() * clen) - 1;
+		var moveIndex = function() {
+			cycleIndex++;
+			if (cycleIndex >= clen) {
+				cycleIndex = 0;
+			}
+		}
+		var back1 = document.getElementById("cycleBack1");
+		var back2 = document.getElementById("cycleBack2");
+		var cycle = function() {
+			moveIndex();
+			if (firstCycle) {
+				firstCycle = false;
+				back2.style["backgroundImage"] = "url(" + cycleImgs[cycleIndex] + ")";
+				back1.style["backgroundImage"] = back2.style["backgroundImage"];
+			} else {
+				back1.style["backgroundImage"] = "url(" + cycleImgs[cycleIndex] + ")";
+				back2.classList.add("cycleFade");
+				setTimeout(function() {
+					back2.style["backgroundImage"] = back1.style["backgroundImage"];
+					back2.classList.remove("cycleFade");
+				}, 500); // Wait 0.5 seconds for transition time
+			}
+		};
+		cycle();
+		setTimeout(function() {
+			cycle();
+			setInterval(cycle, (10 * 1000)); // Rtate every 10 * 1000 = 10 seconds.
+		}, (5 * 1000)); // Begin rotation a little quicker on initial.
+	</script>
+	<!-- Contains the main contents of the page due to the nice parallax header image. -->
+	<div style="background-color: white; width: 100%">
+		<div class="section" style="margin-left: auto; margin-right: auto; max-width: 60vw; font-size: 25px; padding-top: 50px; font-family: segoeui">The <font style="color: rgb(253, 184, 19)">PEDIGREE Foundation</font> is working to find a solution to the problem of the millions of homeless dogs in this country. Through our grant programs, we support organizations that save the lives of dogs that would otherwise be lost.
+			Your donation also includes providing disaster relief grants to nonprofit animal welfare organizations impacted by natural disasters.
+
+			<br><br>
+			If you love dogs, here's how you can help right now.
+			<ul>
+				<li>Adopt A Dog</li>
+				<li>Volunteer At your Local Shelter</li>
+				<li style="color: rgb(253, 184, 19); cursor: pointer;" onclick="openLink(this)" data-href="https://donate.pedigreefoundation.org/give/191703/#!/donation/checkout">Donate</li>
+			</ul>
+		</div>
+		<br><br>
+		<br><br><br><br>
+		<div class="footer">
+			<div class="section" style="text-align: center; padding-top: 80px; padding-bottom: 50px; background-color: rgb(240, 240, 240)">
+				<div class="sectionColumn" style="width: 25%"><button onclick="openLink(this)" data-href="index.html">Home</button></div>
+				<div class="sectionColumn" style="width: 25%"><button onclick="openLink(this)" data-href="contact.html">Contact</button></div>
+				<div class="sectionColumn" style="width: 25%"><button onclick="openLink(this)" data-href="legal.html">Legal</button></div>
+				<div class="sectionColumn" style="width: 25%"><button onclick="openLink(this)" data-href="privacypolicy.html">Privacy Policy</button></div>
+			</div>
+			<div class="section" style="text-align: center; padding-top: 20px; padding-bottom: 120px; background-color: rgb(240, 240, 240)">
+				<div class="sectionColumn" style="width: 25%"><img onclick="openLink(this);" data-href="http://facebook.com" class="socialicon" src="resources/images/social/facebook.png"></div>
+				<div class="sectionColumn" style="width: 25%"><img onclick="openLink(this);" data-href="http://instagram.com" class="socialicon" src="resources/images/social/instagram.png"></div>
+				<div class="sectionColumn" style="width: 25%"><img onclick="openLink(this);" data-href="http://twitter.com" class="socialicon" src="resources/images/social/twitter.png"></div>
+				<div class="sectionColumn" style="width: 25%"><img onclick="openLink(this);" data-href="http://youtube.com" class="socialicon" src="resources/images/social/youtube.png"></div>
+			</div>
+			<div class="section" style="text-align: center; padding-top: 20px; padding-bottom: 120px; background-color: rgb(240, 240, 240)">
+				<div class="sectionColumn" style="width: 100%">
+					<h3>© 2019 Pedigree Foundation</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

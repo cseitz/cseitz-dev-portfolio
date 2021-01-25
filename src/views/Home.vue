@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+    <img alt="Vue logo" src="../assets/logo.png" hidden>
+    <Portfolio/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Portfolio from '@/views/Portfolio.vue';
 
 export default {
   name: 'Home',
+  data() {
+    return {
+      title: "Hey, I'm Chris Seitz.",
+      description: `
+      A Full-Stack Web Developer and jack of all trades.
+      I got my start in freelance game development when I was 12,
+      and since then I've done a little bit of everything.
+      `,
+    }
+  },
   components: {
-    HelloWorld
+    Portfolio,
   }
 }
 </script>

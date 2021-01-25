@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
+
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/fetch.js"></script>
+    <script src="resources/js/wavesurfer.min.js"></script>
+
+    <script src="resources/js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="resources/css/home.css">
+    <script src="resources/js/home.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar">
+        <div id="navbar_inner">
+            <img class="left logo" src="resources/images/logo.png" alt="Logo for Nathan Taylor and Friends.">
+            <button class="right" onclick="window.location.replace(&apos;http://facebook.com/ntandfriends&apos;);" style="margin-top: 2.5%; height: 30px!important; background-image: url(&apos;resources/images/facebooklogo.png&apos;); background-size: contain; background-position: center; background-repeat: no-repeat;"></button>
+            <button class="right" onclick="window.location.href = (window.location.href + &apos;#&apos;).replace(&apos;##&apos;, &apos;#&apos;);">Blog</button>
+            <!-- I don't like to use href, but the requirement was to have blog do a # on the end. -->
+            <button class="right" onclick="window.location.replace(&apos;/events.html&apos;);">Events</button>
+            <button class="right" onclick="window.location.replace(&apos;/index.html&apos;);">Home</button>
+        </div>
+    </div>
+
+
+    <div class="section" id="waveform_section" style="height: 30vh; max-height: 400px;">
+        <h1 style="font-size: 4vh;">NEW SINGLE:</h1>
+        <h2 style="font-size: 4vh;">DELTA BOUND</h2>
+        <img id="playPause" src="resources/images/play-button.png">
+        <div id="waveform">
+
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="section" style="max-width: 60vw; margin-left: 20vw;">
+        <p class="bandDescription_Paragraph">
+            Born of down-home country folk. Blended with Heartland Jazz. Soaked in Delta Blues.
+        </p><br>
+        <p class="bandDescription_Paragraph">
+            Nathan Taylor &amp; Friends explode with rich sound and purely blended talent. This talent is bathed in a wide range of vintage American blues &amp; roots music, born of the soul of the heartland and the most fortunate front porches of Canton, Illinois.
+        </p><br>
+        <p class="bandDescription_Paragraph">
+            From classic roots songs and blues of the delta to early New Orleans jazz and Nathan Taylor originals, their audiences dance to soulful spins on the old styles mixed with new music as they are transported to simpler times, past and present.
+        </p><br>
+
+        <p></p>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="section" style="background-color: #f8f8f8;">
+        <br><br>
+        <div class="image-container" style="max-width: 400px; width: 80vw; margin-left: auto; margin-right: auto; text-align: center; min-height: 200px;">
+            <div style="width: 100%;">
+                <span class="bandMember" style="display: inline-block; background-image: url(&apos;resources/images/members/Adam_Kimbrell.jpg&apos;);"><h1>Adam Kimbrell</h1></span>
+                <span class="bandMember" style="display: inline-block; background-image: url(&apos;resources/images/members/Jason_Bannon.jpeg&apos;);"><h1>Jason Bannon</h1></span>
+                <span class="bandMember" style="display: inline-block; background-image: url(&apos;resources/images/members/Larry_Harms.jpg&apos;);"><h1>Larry Harms</h1></span>
+                <span class="bandMember" style="display: inline-block; background-image: url(&apos;resources/images/members/Nathan_Taylor.jpg&apos;);"><h1>Nathan Taylor</h1></span>
+                <span class="bandMember" style="display: inline-block; background-image: url(&apos;resources/images/members/Tom_Stoner.jpg&apos;);"><h1>Tom Stoner</h1></span>
+
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+
+    <div class="footer">
+        SUPPORT LIVE MUSIC
+    </div>
+
+</body>
+
+</html>

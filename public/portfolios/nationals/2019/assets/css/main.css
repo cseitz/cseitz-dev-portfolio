@@ -1,0 +1,216 @@
+body { /* Remove spacing around body for cleaner look */
+    margin: 0px;
+}
+
+
+
+/* Fonts, Texts, and Floats */
+
+@font-face {
+    font-family: segoeui;
+    src: url(../segoeui.ttf);
+}
+
+* {
+    outline: none;
+    font-family: segoeui;
+    font-weight: normal;
+
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 21px;
+    font-weight: 200;
+    margin-top: 0px;
+}
+
+.left-float {
+    float: left;
+    height: 100%;
+}
+
+.right-float {
+    float: right;
+    height: 100%;
+}
+
+/* Media */
+
+@media (max-width: 370px) { /* Prevent Navbar from going to other page at small screen size */
+	#navlogo img {
+		max-height: 5vw!important;
+	}
+}
+
+@media (max-width: 660px) {
+    .mobile {}
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobiletablet {
+        display: initial !important;
+    }
+
+    .tabletdesktop {
+        display: none !important;
+    }
+
+
+    .navbtn {
+        font-size: 3vw !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+	#facebookbtn {
+		max-height: 5vw!important;
+	}
+}
+
+@media (min-width: 660px) {
+    .mobile {
+        display: none;
+    }
+
+    .tablet {}
+
+    .desktop {
+        display: none;
+    }
+
+    .mobiletablet {
+        display: initial !important;
+    }
+
+    .tabletdesktop {
+        display: initial !important;
+    }
+
+    .navbar-inner {
+        width: 90vw;
+    }
+}
+
+@media (min-width: 900px) {
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: none !important;
+    }
+
+    .desktop {
+        display: initial !important;
+    }
+
+    .mobiletablet {
+        display: none !important;
+    }
+
+    .tabletdesktop {
+        display: initial !important;
+    }
+
+    .navbar-inner {
+        width: 80vw;
+    }
+}
+
+/* NavBar */
+.navbar {
+    z-index: 1000;
+    width: calc(100% - 40px);
+    top: 0px;
+    left: 0px;
+    height: 92px;
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(255, 153, 45);
+    position: fixed;
+    transition: height 0.25s;
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.navbar.small { /* For the thinner navbar when scrolling */
+    height: 60px;
+}
+
+.navbar-spacer {
+    height: 92px;
+    background-color: rgb(255, 153, 45);
+}
+
+.navbar-inner {
+    margin: auto;
+    max-width: 1600px;
+    height: 100%;
+}
+
+.navbar button { /* Styling for navbar buttons */
+    border: 0px;
+    background: none;
+    height: 100%;
+    padding: 0px 20px 0px 20px;
+    vertical-align: bottom;
+    color: white;
+    font-size: 140%;
+    font-weight: 100;
+    cursor: pointer;
+	transition: transform 0.25s;
+}
+.navbar button:hover {
+	transform: scale(1.1);
+}
+
+/* Header Image */
+.headerimage {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.headerimage-image {
+    width: 100%;
+    margin: auto;
+    display: inline;
+}
+
+/* Dividers */
+
+.full-width {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.divider {
+    height: 100%;
+    display: inline-block;
+}
+
+.spacer {
+    width: 100%;
+}
+
+
+/* Hoverable Images */
+
+img.hover {
+    transition: transform 0.25s;
+}
+
+img.hover:hover {
+    transform: scale(1.1);
+}

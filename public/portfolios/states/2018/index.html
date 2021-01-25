@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+	<script src="include.js" type="text/javascript"></script>
+	<script>
+		var _link = function(_url) {
+			window.location.href = _url;
+		}
+	</script>
+</head>
+<body>
+	
+	<div class="topImageHeader">
+		<img class="headerImage" id="headerImage" src="resources/stock/coffee.jpg" style="margin-top: -22%;">
+		<img style="position: absolute; top: 18%; font-size: 5vw; color: white; left: 8%; width: 30%;" src="resources/logo/transparentBox.png">
+	</div>
+	<div class="brownRow"></div>
+	
+	<div id="navBarSensor"></div>
+	<div id="navBar" class="navBar navBarSize">
+		<div class="brownBar"></div>
+		
+		<div class="headerButtons" style="padding-left: 15px;">
+			<button class="headerButton" onclick="_link('history.html');">Our History</button>
+			<button class="headerButton" onclick="_link('products.html');">Our Products</button>
+			<button class="headerButton" onclick="_link('gifts.html');">Gifts</button>
+		</div>
+		<div class="fancyText headerText" style="color: white; font-size: 2.8vw; padding-right: 1%; position: absolute; right: 7vw; max-width: 45vw; top: 0px;">Winans Chocolate & Coffees</div>
+		
+		<div style="text-align: center;">
+			<img src="resources/logo/transparentCircle.png" onclick="_link('index.html');" class="circleImage bigCircle">
+		</div>
+	</div>
+	<div id="fakeNavBar" class="navBarSize fakeNavBar hidden">
+	</div>
+	<script>
+		var _curAffix = false;
+		var _affixBar = document.getElementById("navBar");
+		var _fakeBar = document.getElementById("fakeNavBar");
+		var _navSensor = document.getElementById("navBarSensor");
+		var _toggleAffix = function(_active) {
+			if (_active != _curAffix) {
+				_curAffix = _active;
+				if (_active) {
+					_affixBar.classList.add("affixNavBar");
+					_fakeBar.classList.remove("hidden");
+				} else {
+					_affixBar.classList.remove("affixNavBar");
+					_fakeBar.classList.add("hidden");
+				}
+			}
+		}
+		var _updateAffix = function() {
+			var _appear = (window.scrollY > _navSensor.offsetTop);
+			//console.log(_appear);
+			if (_appear != _curAffix) {
+				_toggleAffix(_appear);
+			}
+		}
+		window.onscroll = _updateAffix;
+		setInterval(_updateAffix, 1000);
+	</script>
+	
+	<br>
+	<div class="bodyPager">
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<div class="bodyContent">
+	
+	<hr>
+	<br>
+	<div class="fancyText paragraphTitle" style="color: black;">We proudly present a world of flavor!</div>
+	<br><hr><br>
+	<p class="paragraphBody" style="width: 35%;">
+	Discover the best resource for premium chocolates (handmade the same way for generations), freshly roasted coffees (hand sourced worldwide) and gifts to delight everyone. With our factory and roastery located in Ohio, retail stores across the Midwest and a staff that is ready to ship your selections anywhere, you will fall in love with our hand crafted products and our first rate customer care.
+	</p>
+	
+	<div class="paragraphBody" style="width: 35%; position: absolute; right: 15px; top: 428px;">
+		
+		<img class="bodyImage" src="resources/stock/coffeegrounds1.jpg" style="margin-left: -45%">
+		
+		<img class="bodyImage" src="resources/stock/chocolates1.jpg" style="margin-left: -35%; margin-top: 15%;">
+		
+	</div>
+	
+	<hr>
+	<br>
+	
+	</div>
+	
+	<div class="footer">
+	<div class="brownBar">
+	</div>
+	<div class="whiteBar">
+	</div>
+	
+	<br>
+	<br>
+	<table style="width: 100%; text-align: center; color: white; font-size: 35px; line-height: 85px;">
+		<tr>
+			<td onclick="_link('index.html');">Home</td>
+			<td>Contact</td>
+			<td>Team</td>
+		</tr>
+		<tr>
+			<td>Jobs</td>
+			<td>Press</td>
+			<td>FAQs</td>
+		</tr>
+		<tr>
+			<td><img class="mediaIcon" src="resources/socialmedia/twitter.png"></td>
+			<td><img class="mediaIcon" src="resources/socialmedia/instagram.png"></td>
+			<td><img class="mediaIcon" src="resources/socialmedia/facebook.png"></td>
+		</tr>
+	</table>
+	<h5 style="text-align: center; width; 100%; color: white; font-size: 2vw;">© 2018 Winans Chocolates and Coffees</h5>
+	
+	</div>
+	
+	</div>
+	
+	
+	
+</body>
+</html>

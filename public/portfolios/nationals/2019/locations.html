@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <title>Reed's Cheese | Locations</title>
+    <script src="assets/js/fetch.js"></script>
+    <script src="assets/js/jquery-3.3.0.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/locations.js"></script>
+</head>
+
+<body style="overflow-x: hidden;"> <!-- Remove Horizontal Overflow -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left-float">
+				<!-- Left Aligned Buttons -->
+                <button class="navbtn" id="navlogo" onclick="linkify(this)" data-href="index.html"><img style="height: 50px; max-height: 10vw;" src="assets/media/REEDS-CHEES-logo-stack-white2.png" alt="Reed's Cheese Logo"></button>
+            </div>
+            <div class="right-float">
+				<!-- Right Aligned Buttons -->
+                <button class="navbtn" onclick="linkify(this)" data-href="locations.html">Follow Our Truck</button>
+                <button class="navbtn" onclick="linkify(this)" data-href="catering.html">Catering</button>
+                <button class="navbtn" onclick="linkify(this)" data-href="https://facebook.com/reedscheese"><img id="facebookbtn" style="height: 100%; max-height: 30px;" src="assets/media/FB-f-Logo__white_29.png" alt="Facebook Logo"></button>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-spacer"> <!-- Since Navbar is fixed, we want to push down content -->
+    </div>
+    <div class="headerimage" style="height: calc(75vh - 92px); max-height: 50vw;">
+        <img class="headerimage-image" style="margin-top: -12%;" src="assets/images/festival.jpeg" alt=""> <!-- Nice big header image -->
+    </div>
+
+    <div class="spacer" style="height: 35px;">
+    </div>
+
+    <h1 style="width: 100%; text-align: center;">Follow the Truck</h1>
+    <div hidden> <!-- These html elements are used by locations.js : As a result, we hide them because they are not needed to be shown. -->
+		<!-- Specific keywords with ! in front correspond to specific array keynames for the API. For example "hello !thing" with {"thing": "world"} => "hello world" -->
+		<!-- These keywords are simply string replaced with their data in that specific location based on the location api. -->
+        <div id="mobile-template"> <!-- The layout for mobile is different from tablet and desktop -->
+
+            <div class="full-width" style="padding-bottom: 30px;">
+                <h2 style="margin-bottom: 5px; font-weight: bold;">!name</h2>
+                <div class="full-width">
+                    <div style="width: 40%; text-align: left;">!date</div>
+                    <div style="width: 40%; text-align: right; float: right; margin-top: -21px;">!time</div>
+                </div>
+                <div>!location</div>
+            </div>
+
+        </div>
+        <div id="desktop-template"> <!-- Tablet and Desktop share the same layout based on the wireframe -->
+
+            <div class="full-width" style="padding-bottom: 30px;">
+                <div class="full-width">
+                    <h2 style="margin-bottom: 5px; width: 40%; text-align: left; font-weight: bold;">!name</h2>
+                    <div style="width: 40%; text-align: right; float: right; margin-top: -21px;">!date</div>
+                </div>
+                <div class="full-width">
+                    <div style="width: 40%; text-align: left;">!location</div>
+                    <div style="width: 40%; text-align: right; float: right; margin-top: -21px;">!time</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="mobile"> <!-- Only show on mobile -->
+        <div id="mobile-contents" class="full-width" style="padding: 25px; width: calc(100% - 50px);"> <!-- Add the innerHTML of events to here with mobile layout -->
+
+        </div>
+    </div>
+    <div class="tabletdesktop"> <!-- Show on tablets and desktop (essentially, show when not mobile) -->
+        <div id="desktop-contents" class="full-width" style="padding: 25px; width: calc(100% - 50px);"> <!-- Add the innerHTML of events to here with desktop/tablet layout -->
+
+        </div>
+    </div>
+
+</body>
+
+</html>
