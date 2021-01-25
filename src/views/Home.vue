@@ -4,6 +4,7 @@
     <p>{{ description }}</p>
     <img alt="Vue logo" src="../assets/logo.png" hidden>
     <Portfolio/>
+    test
   </div>
 </template>
 
