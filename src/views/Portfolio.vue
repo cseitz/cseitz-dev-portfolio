@@ -55,16 +55,30 @@ const Items = [
   ],
   [
     new PortfolioItem({
-      name: 'Kent Hack Enough 2020',
-      path: '/portfolios/khe/2020',
+      name: 'SkillsUSA Nationals 2019',
+      path: '/portfolios/nationals/2019/index.html',
       description: 'blablabla. supports markdown though.',
-      image: require('@/assets/portfolios/khe2020.png'),
+      image: require('@/assets/portfolios/nationals2019.jpg'),
     }),
     new PortfolioItem({
-      name: 'Kent Hack Enough 2020',
-      path: '/portfolios/khe/2020',
+      name: 'SkillsUSA States 2019',
+      path: '/portfolios/states/2019/',
       description: 'blablabla. supports markdown though.',
-      image: require('@/assets/portfolios/khe2020.png'),
+      image: require('@/assets/portfolios/states2019.jpg'),
+    }),
+  ],
+  [
+    new PortfolioItem({
+      name: 'SkillsUSA Nationals 2018',
+      path: '/portfolios/nationals/2018/',
+      description: 'blablabla. supports markdown though.',
+      image: require('@/assets/portfolios/nationals2018.png'),
+    }),
+    new PortfolioItem({
+      name: 'SkillsUSA States 2018',
+      path: '/portfolios/states/2018/',
+      description: 'blablabla. supports markdown though.',
+      image: require('@/assets/portfolios/states2018.jpg'),
     }),
   ],
 ]
