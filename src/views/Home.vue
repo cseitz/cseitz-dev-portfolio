@@ -5,6 +5,15 @@
         <h1>{{ title }}</h1>
         <h3 style="font-weight: lighter;">{{ description }}</h3>
       </div>
+      <div class="links-section">
+        <a v-for="[title, logo, link] in links"
+          v-bind:key="title"
+          v-bind:title="title"
+          v-bind:href="link"
+          target="_blank">
+          <img v-bind:alt="title" v-bind:src="logo">
+        </a>
+      </div>
       <div class="photo-section">
         <span class="photo" v-bind:style="{ 'background-image': 'url(' + photo + ')' }">
           <img alt="Photo of Chris" v-bind:src="photo">
@@ -23,6 +32,8 @@
 // @ is an alias to /src
 import Portfolio from '@/views/Portfolio.vue';
 import Photo from '@/assets/MeSuitPictureFall2020.jpg';
+import GithubLogo from '@/assets/github.svg';
+import LinkedInLogo from '@/assets/linkedin.png';
 
 let story = `
 I got my start in early 2012 doing freelance game development on Roblox.com for various people and communities. Since then I have done a fair bit of everything. I've worked on almost two dozen projects on Roblox.com, I've managed projects, I've done community management, I've automated online communities with chat bots, websites, and databases with hundreds of thousands of records, and more. I did this for 8 years, until I departed from the platform in November of 2020. I have also participated in SkillsUSA's Web Design competition in April of 2018 and 2019 at the high school level. I am a two-time back-to-back state champion for Ohio and a two-time national qualifier in Web Design for SkillsUSA. In May of 2018 and 2019, after winning gold at the state level both times, I participated at the national high school level in Louisville, Kentucky. There I placed 5th among other state champions in 2018 and 4th in the nation in 2019. I am also a student leader/club officer and the head of the development team for HacKSU, Kent State University's student-run Computer Science club; in addition to sharing the same roles as an organizer for Kent Hack Enough, KSU's annual Computer Science hackathon, which is organized by HacKSU. Like I said, a fair bit of everything.
@@ -46,6 +57,10 @@ export default {
       photo: Photo,
       story,
       shortstory,
+      links: [
+        ['Github', GithubLogo, 'https://github.com/cseitz'],
+        ['LinkedIn', LinkedInLogo, 'https://www.linkedin.com/in/seitzc'],
+      ],
     }
   },
   components: {
@@ -61,7 +76,7 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(20px, auto);
   grid-template-areas:
-  'title title title'
+  'title title links'
   'photo story story';
   margin-left: auto;
   margin-right: auto;
@@ -107,6 +122,7 @@ export default {
     padding-left: 10px;
     h1 {
       margin-bottom: 0px;
+      margin-top: 0px;
       @include mobile {
         font-size: 1.8em;
       }
@@ -120,12 +136,36 @@ export default {
       }
     }
   }
+  .links-section {
+    grid-area: links;
+    padding-left: 10px;
+    padding-right: 10px;
+    a {
+      height: 100%;
+      display: inline-block;
+      float: right;
+      padding-left: 15px;
+      @include mobile {
+        float: inherit;
+      }
+      img {
+        padding-top: 1.25em;
+        max-height: 2.5em;
+      }
+      transform: scale(0.8);
+      transition: transform 0.15s;
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
+  }
   @include mobile {
     max-width: 95vw;
     grid-template-areas:
     'title title title'
     'photo photo photo'
-    'story story story';
+    'story story story'
+    'links links links';
     padding-top: 2vh;
     .title-section {
       text-align: inherit;
