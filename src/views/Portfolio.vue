@@ -7,7 +7,8 @@
       <a class="portfolioItem"
         v-for="(item, index) in row"
         v-bind:key="index"
-        v-bind:href="item.path">
+        v-bind:href="item.path"
+        target="_blank">
         <div class="portfolioImage"
           v-bind:style="{ 'background-image': `url(${item.image})`}"
           ></div>

@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       title: "Hey, I'm Chris Seitz.",
-      description: `Full-Stack Developer & Aspiring DevOps Specialist`,
+      description: `Full-Stack Web Developer & Aspiring DevOps Specialist`,
       photo: Photo,
       story,
       shortstory,
