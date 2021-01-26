@@ -37,6 +37,7 @@
 import marked from 'marked';
 import Portfolio from '@/views/Portfolio.vue';
 import Photo from '@/assets/MeSuitPictureFall2020.jpg';
+import MaskPhoto from '@/assets/cseitz_mask.png';
 import GithubLogo from '@/assets/github.svg';
 import LinkedInLogo from '@/assets/linkedin.png';
 
@@ -58,10 +59,11 @@ site is a work in progress.
 export default {
   name: 'Home',
   data() {
+    let { query } = this.$route;
     return {
       title: "Hey, I'm Chris Seitz.",
       description: `Full-Stack Web Developer & Aspiring DevOps Specialist`,
-      photo: Photo,
+      photo: ('mask' in query || 'covid' in query) ? MaskPhoto : Photo,
       story: marked(story),
       shortstory: marked(shortstory),
       links: [
