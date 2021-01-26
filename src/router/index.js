@@ -6,11 +6,17 @@ const routes = [
   {
     path: '/',
     name: 'Home',
+    meta: {
+      title: 'Chris Seitz'
+    },
     component: Home
   },
   {
     path: '/portfolio',
     name: 'Portfolio',
+    meta: {
+      title: 'Chris Seitz - Portfolio'
+    },
     component: Portfolio
   },
   {
@@ -26,6 +32,10 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.afterEach((to) => {
+  document.title = to.meta.title || to.name || 'Hacksu';
 })
 
 export default router

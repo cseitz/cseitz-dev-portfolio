@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio">
-    <h1>Portfolio</h1>
+    <h1 style="margin-bottom: 0.3em">Some of my Websites</h1>
     <div class="portfolioRow"
       v-for="(row, rowIndex) in items"
       v-bind:key="rowIndex">
@@ -17,7 +17,6 @@
         </div>
       </a>
     </div>
-    {{ items }}
   </div>
 </template>
 
@@ -105,7 +104,8 @@ export default {
     color: inherit;
     display: inline-block;
     //background-color: red;
-    margin: 5vmin;
+    //margin: 5vmin;
+    margin: 0px 5vmin 1vmin 5vmin;
     border-radius: 0.75em;
     padding: 3vmin;
 
@@ -122,6 +122,11 @@ export default {
     .portfolioContent {
       padding: 3vmin;
       padding-top: 10px;
+    }
+
+    transition: transform 0.1s;
+    &:hover {
+      transform: scale(1.05);
     }
   }
 }
