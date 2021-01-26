@@ -19,8 +19,7 @@
           <img alt="Photo of Chris" v-bind:src="photo">
         </span>
       </div>
-      <div class="story-section">
-        <pre>{{ shortstory.trim() }}</pre>
+      <div class="story-section" v-html="shortstory">
       </div>
     </div>
     <br><br>
@@ -30,6 +29,7 @@
 
 <script>
 // @ is an alias to /src
+import marked from 'marked';
 import Portfolio from '@/views/Portfolio.vue';
 import Photo from '@/assets/MeSuitPictureFall2020.jpg';
 import GithubLogo from '@/assets/github.svg';
@@ -55,8 +55,8 @@ export default {
       title: "Hey, I'm Chris Seitz.",
       description: `Full-Stack Web Developer & Aspiring DevOps Specialist`,
       photo: Photo,
-      story,
-      shortstory,
+      story: marked(story),
+      shortstory: marked(shortstory),
       links: [
         ['Github', GithubLogo, 'https://github.com/cseitz'],
         ['LinkedIn', LinkedInLogo, 'https://www.linkedin.com/in/seitzc'],
