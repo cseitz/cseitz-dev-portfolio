@@ -105,7 +105,7 @@ export default {
     background-color: #f0f0f0;
     margin: 10px;
     border-radius: 0.75em;
-    padding: 0.5em;
+    padding: 0.5em 2em 0.5em 2em;
     pre {
       display: inline-block;
     }
