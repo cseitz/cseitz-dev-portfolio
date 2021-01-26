@@ -45,7 +45,7 @@ I am unsure what drove me to this when I started out, but I was 11-12 at the tim
 As of the Spring 2021 Semester, I am currently looking for Internship positions in Northeast Ohio in the areas of Information Technology, DevOps, Software Development, and Full-Stack or Backend Web Development.
 `;
 let shortstory = `
-short story
+short story. this whole site is a work in progress.
 `;
 
 export default {
