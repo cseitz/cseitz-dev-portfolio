@@ -23,6 +23,15 @@
         <div class="content" v-html="shortstory">
 
         </div>
+        <div class="mobile-links links-section">
+          <a v-for="[title, logo, link] in links"
+            v-bind:key="title"
+            v-bind:title="title"
+            v-bind:href="link"
+            target="_blank">
+            <img v-bind:alt="title" v-bind:src="logo">
+          </a>
+        </div>
         <br>
         [ put something here ]
       </div>
@@ -117,6 +126,11 @@ export default {
       border-radius: 0.75em;
       padding: 0.5em 2em 0.5em 2em;
     }
+    .mobile-links {
+      @include display-not(mobile) {
+        display: none;
+      }
+    }
   }
   .title-section {
     grid-area: title;
@@ -171,6 +185,11 @@ export default {
         filter: brightness(100%);
         opacity: 1;
       }
+    }
+  }
+  .links-section:not(.mobile-links) {
+    @include mobile {
+      display: none;
     }
   }
   @include mobile {
