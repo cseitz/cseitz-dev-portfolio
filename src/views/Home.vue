@@ -11,7 +11,7 @@
         </span>
       </div>
       <div class="story-section">
-        <pre>{{ shortstory }}</pre>
+        <pre>{{ shortstory.trim() }}</pre>
       </div>
     </div>
     <br><br>
