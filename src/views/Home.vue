@@ -19,7 +19,12 @@
           <img alt="Photo of Chris" v-bind:src="photo">
         </span>
       </div>
-      <div class="story-section" v-html="shortstory">
+      <div class="story-section">
+        <div class="content" v-html="shortstory">
+
+        </div>
+        <br>
+        [ put something here ]
       </div>
     </div>
     <br><br>
@@ -45,7 +50,9 @@ I am unsure what drove me to this when I started out, but I was 11-12 at the tim
 As of the Spring 2021 Semester, I am currently looking for Internship positions in Northeast Ohio in the areas of Information Technology, DevOps, Software Development, and Full-Stack or Backend Web Development.
 `;
 let shortstory = `
-short story. this whole site is a work in progress.
+site is a work in progress.
+
+[ short story ]
 `;
 
 export default {
@@ -102,12 +109,11 @@ export default {
   }
   .story-section {
     grid-area: story;
-    background-color: #f0f0f0;
-    margin: 10px;
-    border-radius: 0.75em;
-    padding: 0.5em 2em 0.5em 2em;
-    pre {
-      display: inline-block;
+    .content {
+      background-color: #f0f0f0;
+      margin: 10px;
+      border-radius: 0.75em;
+      padding: 0.5em 2em 0.5em 2em;
     }
   }
   .title-section {
