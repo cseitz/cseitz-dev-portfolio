@@ -153,9 +153,15 @@ export default {
         max-height: 2.5em;
       }
       transform: scale(0.8);
-      transition: transform 0.15s;
+      transition: transform 0.15s, filter 0.3s;
+      @include display-not(mobile) {
+        filter: brightness(0%);
+        opacity: 0.5;
+      }
       &:hover {
         transform: scale(0.9);
+        filter: brightness(100%);
+        opacity: 1;
       }
     }
   }
