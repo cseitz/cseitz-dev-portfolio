@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Portfolio from '../views/Portfolio.vue'
+import GalacticConquest from '../views/roblox/gc/GalacticConquest.vue'
 
 const routes = [
   {
@@ -18,6 +19,14 @@ const routes = [
       title: 'Chris Seitz - Portfolio'
     },
     component: Portfolio
+  },
+  {
+    path: '/portfolio/galactic-conquest',
+    name: 'GalacticConquest',
+    meta: {
+      title: 'Chris Seitz - Portfolio - Galactic Conquest'
+    },
+    component: GalacticConquest
   },
   {
     path: '/about',

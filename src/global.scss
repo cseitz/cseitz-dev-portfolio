@@ -7,3 +7,8 @@ body {
     //background-color: red;
   }
 }
+
+@mixin rounded {
+  //@include responsive(border-radius, 10px, 10px, 10px);
+  border-radius: 10px; //1vh;
+}

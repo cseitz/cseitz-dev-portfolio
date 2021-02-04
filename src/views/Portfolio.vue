@@ -1,10 +1,10 @@
 <template>
   <div class="portfolio">
-    <h1 style="margin-bottom: 0.3em">Some of my Websites</h1>
+    <h1 style="margin-bottom: 0.3em">Some of My Projects</h1>
     <div class="portfolioRow"
       v-for="(row, rowIndex) in items"
       v-bind:key="rowIndex">
-      <a class="portfolioItem"
+      <a v-if="!row.header" class="portfolioItem"
         v-for="(item, index) in row"
         v-bind:key="index"
         v-bind:href="item.path"
@@ -17,6 +17,7 @@
           <div v-html="item.description"></div>
         </div>
       </a>
+      <h1 v-else>{{ row.header }}</h1>
     </div>
   </div>
 </template>
@@ -55,15 +56,26 @@ const Items = [
   ],
   [
     new PortfolioItem({
+      name: 'Galactic Conquest',
+      path: '/portfolio/galactic-conquest',
+      description: 'blablabla. supports markdown though.',
+      image: 'https://cseitz-sync.nyc3.digitaloceanspaces.com/galactic-conquest/GC_MainScreen1.jfif',
+    })
+  ],
+  {
+    header: 'SkillsUSA Competition Websites',
+  },
+  [
+    new PortfolioItem({
       name: 'SkillsUSA Nationals 2019',
       path: '/portfolios/nationals/2019/index.html',
-      description: 'blablabla. supports markdown though.',
+      description: `Placed 4th nationally in 2019.`,
       image: require('@/assets/portfolios/nationals2019.jpg'),
     }),
     new PortfolioItem({
       name: 'SkillsUSA States 2019',
       path: '/portfolios/states/2019/',
-      description: 'blablabla. supports markdown though.',
+      description: `Placed 1st for Ohio in 2019.`,
       image: require('@/assets/portfolios/states2019.jpg'),
     }),
   ],
@@ -71,13 +83,13 @@ const Items = [
     new PortfolioItem({
       name: 'SkillsUSA Nationals 2018',
       path: '/portfolios/nationals/2018/',
-      description: 'blablabla. supports markdown though.',
+      description: `Placed 5th nationally in 2018.`,
       image: require('@/assets/portfolios/nationals2018.png'),
     }),
     new PortfolioItem({
       name: 'SkillsUSA States 2018',
       path: '/portfolios/states/2018/',
-      description: 'blablabla. supports markdown though.',
+      description: `Placed 1st for Ohio in 2018.`,
       image: require('@/assets/portfolios/states2018.jpg'),
     }),
   ],

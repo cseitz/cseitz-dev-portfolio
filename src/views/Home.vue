@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <alert>work in progress alert message</alert>
     <div class="header">
       <div class="title-section">
         <h1>{{ title }}</h1>
@@ -44,6 +45,7 @@
 <script>
 // @ is an alias to /src
 import marked from 'marked';
+import Alert from '@/components/Alert.vue';
 import Portfolio from '@/views/Portfolio.vue';
 import Photo from '@/assets/MeSuitPictureFall2020.jpg';
 import MaskPhoto from '@/assets/cseitz_mask.png';
@@ -83,12 +85,23 @@ export default {
   },
   components: {
     Portfolio,
+    Alert,
   }
 }
 </script>
 
 <style lang="scss" scoped>
 
+.home {
+  padding-top: 6vh;
+  & > .alert {
+    margin-top: -2vh;
+    max-width: 900px;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -100,7 +113,7 @@ export default {
   margin-right: auto;
   width: 80vw;
   max-width: 900px;
-  padding-top: 10vh;
+  padding-top: 4vh;
   .photo-section {
     grid-area: photo;
     .photo {
@@ -175,10 +188,10 @@ export default {
         max-height: 2.5em;
       }
       transform: scale(0.8);
-      transition: transform 0.15s, filter 0.3s;
+      transition: transform 0.15s, filter 0.3s, opacity 0.15s;
       @include display-not(mobile) {
         filter: brightness(0%);
-        opacity: 0.5;
+        opacity: 0.35;
       }
       &:hover {
         transform: scale(0.9);
