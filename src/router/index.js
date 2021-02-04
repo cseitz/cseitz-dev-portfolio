@@ -13,20 +13,20 @@ const routes = [
     component: Home
   },
   {
-    path: '/portfolio',
-    name: 'Portfolio',
-    meta: {
-      title: 'Chris Seitz - Portfolio'
-    },
-    component: Portfolio
-  },
-  {
     path: '/portfolio/galactic-conquest',
     name: 'GalacticConquest',
     meta: {
       title: 'Chris Seitz - Portfolio - Galactic Conquest'
     },
     component: GalacticConquest
+  },
+  {
+    path: '/portfolio',
+    name: 'Portfolio',
+    meta: {
+      title: 'Chris Seitz - Portfolio'
+    },
+    component: Portfolio
   },
   {
     path: '/about',
