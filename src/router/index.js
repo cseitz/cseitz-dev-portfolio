@@ -15,8 +15,10 @@ const routes = [
   {
     path: '/portfolio/galactic-conquest',
     name: 'GalacticConquest',
+    alias: ['/gc', '/portfolio/gc'],
     meta: {
-      title: 'Chris Seitz - Portfolio - Galactic Conquest'
+      title: 'Chris Seitz - Portfolio - Galactic Conquest',
+      rewrite: true,
     },
     component: GalacticConquest
   },
@@ -38,9 +40,37 @@ const routes = [
   }
 ]
 
+const rewrites = [
+  {
+    path: '/hacksu-2021',
+    redirect: '/portfolios/hacksu/2021',
+  },
+  {
+    path: '/khe-2020',
+    redirect: '/portfolios/khe/2020',
+  },
+]
+
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.rewrite && to.matched && to.matched[0].aliasOf) {
+    next(Object.assign({
+      ...to,
+    }, {
+        path: to.matched[0].aliasOf.path,
+      }))
+  } else {
+    let rewrited = rewrites.find(({ path }) => path == to.path);
+    if (rewrited) {
+      location.replace(rewrited.redirect);
+    } else {
+      next();
+    }
+  }
 })
 
 router.afterEach((to) => {
