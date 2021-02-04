@@ -15,10 +15,9 @@ const routes = [
   {
     path: '/portfolio/galactic-conquest',
     name: 'GalacticConquest',
-    alias: ['/gc', '/portfolio/gc'],
     meta: {
       title: 'Chris Seitz - Portfolio - Galactic Conquest',
-      rewrite: true,
+      //rewrite: true,
     },
     component: GalacticConquest
   },
@@ -49,6 +48,14 @@ const rewrites = [
     path: '/khe-2020',
     redirect: '/portfolios/khe/2020',
   },
+  {
+    path: '/gc',
+    redirect: '/portfolio/galactic-conquest',
+  },
+  {
+    path: '/galactic-conquest',
+    redirect: '/portfolio/galactic-conquest',
+  },
 ]
 
 const router = createRouter({
@@ -57,20 +64,20 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.meta.rewrite && to.matched && to.matched[0].aliasOf) {
+  /*if (to.meta.rewrite && to.matched && to.matched[0].aliasOf) {
     next(Object.assign({
       ...to,
     }, {
         path: to.matched[0].aliasOf.path,
       }))
+  } else {*/
+  let rewrited = rewrites.find(({ path }) => path == to.path);
+  if (rewrited) {
+    location.replace(rewrited.redirect);
   } else {
-    let rewrited = rewrites.find(({ path }) => path == to.path);
-    if (rewrited) {
-      location.replace(rewrited.redirect);
-    } else {
-      next();
-    }
+    next();
   }
+  //}
 })
 
 router.afterEach((to) => {
